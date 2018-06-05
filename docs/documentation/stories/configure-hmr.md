@@ -55,7 +55,7 @@ represents the name of the project you are adding this configuration to in `angu
             "replace": "src/environments/environment.ts",
             "with": "src/environments/environment.hmr.ts"
           }
-        ],
+        ]
       }
     }
   },
@@ -147,7 +147,7 @@ if (environment.production) {
   enableProdMode();
 }
 
-const bootstrap = () => platformBrowserDynamic().bootstrapModule(AppModule);
+const bootstrap = () => platformBrowserDynamic().bootstrapModule(AppModule).catch(err => console.log(err));
 
 if (environment.hmr) {
   if (module[ 'hot' ]) {
